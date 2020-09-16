@@ -1,6 +1,7 @@
+language: generic
 sudo: required
 service:
-    -docker
+    - docker
 
 before_install:
     - docker build -t wyorusso/react-test -f ./client/Dockerfile.dev ./client
