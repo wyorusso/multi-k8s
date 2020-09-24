@@ -18,7 +18,7 @@ before_install:
     - docker build -t wyorusso/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true wyorusso/docker-react npm test
+    - docker run wyorusso/react-test npm test -- --coverage
 
 deploy:
     provider: script
